@@ -1,0 +1,39 @@
+<!doctype html>
+<head>
+    <title>MJML</title>
+    
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+
+<body>
+    <nav>
+        <div class="nav-wrapper">
+          <a href="{{ url_for('home') }}" class="brand-logo">Wellness Hub Parser</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="{{ url_for('sources') }}">Sources</a></li>
+            <li><a href="{{ url_for('supersources') }}">Supersources</a></li>
+            <li><a href="{{ url_for('live_tester') }}">Live Tester</a></li>
+          </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <br>
+            <br>
+            <div class="col-s9 offset-s2">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+    </div>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
